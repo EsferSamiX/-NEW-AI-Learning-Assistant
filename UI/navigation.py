@@ -8,7 +8,9 @@ from UI.essay_writer_ui import render_essay_writer
 from UI.text_summarization_ui import render_text_summarizer
 
 
+
 # PAGE MAP
+
 PAGES = {
     "Home": "home",
     "Educational Chatbot": "educational_chatbot",
@@ -22,33 +24,41 @@ REVERSE_PAGES = {v: k for k, v in PAGES.items()}
 
 def render_navigation():
 
-    # --------------------------------------------------
-    # 1. SESSION STATE INITIALIZATION (SAFE)
-    # --------------------------------------------------
+    
+    # 1. SESSION STATE INITIALIZATION
+    
     if "page" not in st.session_state:
         url_page = st.query_params.get("page", "home")
         st.session_state.page = (
             url_page if url_page in REVERSE_PAGES else "home"
         )
 
-    # --------------------------------------------------
-    # 2. YOUR ORIGINAL CSS — UNCHANGED
-    # --------------------------------------------------
+    
+    # 2. SIDEBAR CSS (FOOTER MOVED SLIGHTLY UP)
+    
     st.markdown(
         """
         <style>
-        section[data-testid="stSidebar"] { height: 100vh !important; }
+        section[data-testid="stSidebar"] {
+            height: 100vh !important;
+        }
+
         div[data-testid="stSidebarContent"] {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             height: 100vh !important;
+            padding-bottom: 12px;
         }
-        .css-1d391kg { padding-top: 1rem; }
+
+        .css-1d391kg {
+            padding-top: 1rem;
+        }
 
         .sidebar-footer {
             text-align: center;
-            padding: 20px;
+            padding: 12px 10px;
+            margin-bottom: 12px;
             color: #94a3b8;
             font-size: 0.85rem;
             border-top: 1px solid #1e293b;
@@ -59,9 +69,9 @@ def render_navigation():
         unsafe_allow_html=True,
     )
 
-    # --------------------------------------------------
-    # 3. SIDEBAR MENU (NO RERUNS, NO RESET)
-    # --------------------------------------------------
+    
+    # 3. SIDEBAR NAVIGATION
+    
     with st.sidebar:
         with st.container():
             selected_label = option_menu(
@@ -74,8 +84,14 @@ def render_navigation():
                 ),
                 key="navigation_menu",
                 styles={
-                    "container": {"padding": "8px", "background-color": "#0f172a"},
-                    "icon": {"color": "#93c5fd", "font-size": "20px"},
+                    "container": {
+                        "padding": "8px",
+                        "background-color": "#0f172a"
+                    },
+                    "icon": {
+                        "color": "#93c5fd",
+                        "font-size": "20px"
+                    },
                     "nav-link": {
                         "font-size": "17px",
                         "text-align": "left",
@@ -101,18 +117,18 @@ def render_navigation():
             unsafe_allow_html=True,
         )
 
-    # --------------------------------------------------
-    # 4. SYNC STATE → URL (NO st.rerun)
-    # --------------------------------------------------
+    
+    # 4. SYNC URL 
+    
     selected_slug = PAGES[selected_label]
 
     if st.session_state.page != selected_slug:
         st.session_state.page = selected_slug
         st.query_params["page"] = selected_slug
 
-    # --------------------------------------------------
-    # 5. ROUTER
-    # --------------------------------------------------
+    
+    # 5. PAGE ROUTER
+    
     page = st.session_state.page
 
     if page == "home":
@@ -129,3 +145,4 @@ def render_navigation():
 
     elif page == "ai_text_summarization":
         render_text_summarizer()
+
