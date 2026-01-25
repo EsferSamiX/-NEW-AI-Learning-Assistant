@@ -6,7 +6,7 @@ def render_home():
 
     st.markdown(
         """
-        ### Available Modules
+        ### Currently Offered Features:
 
         - 📘 Educational Chatbot (PDF-based Q&A)
         - 📆 Exam Study Planner with AI topic expansion
