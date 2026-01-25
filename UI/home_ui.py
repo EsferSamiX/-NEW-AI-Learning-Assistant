@@ -8,7 +8,7 @@ def render_home():
         """
         ### Currently Offered Features:
 
-        - 📘 Educational Chatbot (PDF-based Q&A)
+        - 📘 Educational Chatbot (PDF-Based Q&A, Exam Question Maker and Reviewer)
         - 📆 Exam Study Planner with AI topic expansion
         - ✍️ AI Essay Writer
         - 📝 AI Text & PDF Summarization
