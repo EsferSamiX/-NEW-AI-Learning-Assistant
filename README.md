@@ -63,7 +63,7 @@ An intelligent multi-module learning assistant built using **Streamlit + LLMs**,
 - Automatic revision cycles
 - Subtopic expansion using LLMs
 ---
-
+```bash
 ## 🏗️ Architecture Overview
 
 UI (Streamlit)
