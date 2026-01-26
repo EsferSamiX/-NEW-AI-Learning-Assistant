@@ -90,32 +90,66 @@ Vector Store (FAISS)
 
 ai-learning-assistant/
 │
-├── services/ # Core intelligence modules
-│├── ai_essay_writer/
-│├── ai_text_summarization/
-│├── educational_chatbot/
-│├── exam_study_planner/
-│├── evaluation/
-│├── question_generation/
-│├── rag/
-│└── core/
+├── .streamlit/
+│   ├── config.toml
+│   ├── secrets.toml
+│   └── secrets_example.toml
+│
+├── services/
+│   ├── ai_essay_writer/
+│   │   ├── __init__.py
+│   │   └── essay_writer_service.py
+│   │
+│   ├── ai_text_summarization/
+│   │   ├── __init__.py
+│   │   └── text_summarization_service.py
+│   │   └──summarization_utils.py
+│   ├── educational_chatbot/
+│   │   ├── __init__.py
+│   │   └── rag_service.py
+│   │   └──citaion_service.py
+│   │   └──evaluation_service.py
+│   │   └──question_generator.py
+│   ├── exam_study_planner/
+│   │   ├── __init__.py
+│   │   └── planner_service.py
+│   │   └── planner_utils.py
+|   |   └── schedule_builder.py
+|   |   └── topic_expander.py
+│   ├── core/
+│   │   ├── __init__.py
+│   │   ├── groq_client.py
+│   │   ├── prompt_templates.py
+│   │   └── embeddings_service.py
+│   │   └── cache_service.py
+│       └──pdf_service.py
+        └──vectorstore_service.py
+│   └── __init__.py
+│
+├── UI/
+│   ├── __init__.py
+│   ├── navigation.py
+│   ├── home_ui.py
+│   ├── educational_chatbot_ui.py
+│   ├── essay_writer_ui.py
+│   ├── exam_study_planner_ui.py
+│   └── text_summarization_ui.py
 │
 ├── utils/
-│├── prompt_templates.py # ⭐ All LLM prompts
-│├── constants.py
-│└── text_utils.py
+│   ├── constants.py
+│   └── text_utils.py
+|   └── planner_prifiles.py
+|   └── ui_helpers.py
 │
-├── UI/ # Streamlit UI components
-│
-├── .streamlit/
-│├── config.toml
-│├── secrets.toml # ignored
-│└── secrets_example.toml
+├── venv311/                     # Local virtual environment (not pushed to GitHub)
 │
 ├── app.py
-├── requirements.txt
-├── README.md
+├── Dockerfile                 # Streamlit application entry point
+├── requirements.txt          # Python dependencies
+├── README.md                 # Project documentation
+├── LICENSE
 └── .gitignore
+
 
 
 
