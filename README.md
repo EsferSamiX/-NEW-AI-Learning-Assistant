@@ -62,7 +62,7 @@ An intelligent multi-module learning assistant built using **Streamlit + LLMs**,
 - Adaptive overload handling
 - Automatic revision cycles
 - Subtopic expansion using LLMs
-
+---
 Embedding Model : all-MiniLM-L6-v2
 Deployment : Streamlit Cloud
 LLM Model Used : Llama 3.3 70B versatile
