@@ -63,10 +63,12 @@ An intelligent multi-module learning assistant built using **Streamlit + LLMs**,
 - Automatic revision cycles
 - Subtopic expansion using LLMs
 ---
-Embedding Model : all-MiniLM-L6-v2
-Deployment : Streamlit Cloud
-LLM Model Used : Llama 3.3 70B versatile
----
+### Tech Stack
+- Embedding Model : all-MiniLM-L6-v2
+- Deployment : Streamlit Cloud
+- LLM Model Used : Llama 3.3 70B versatile
+- Python 3.11
+
 
 ## 🏗️ Architecture Overview
 
