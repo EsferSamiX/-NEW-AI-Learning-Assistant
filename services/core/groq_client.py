@@ -7,16 +7,16 @@ from typing import Optional
 load_dotenv()
 
 
-# ---------------------------------------------------------
+
 # Configuration
-# ---------------------------------------------------------
+
 
 DEFAULT_MODEL = "llama-3.3-70b-versatile"
 
 
-# ---------------------------------------------------------
+
 # Client loader
-# ---------------------------------------------------------
+
 
 def get_groq_client() -> Groq:
     """
@@ -41,9 +41,9 @@ def get_groq_client() -> Groq:
     return Groq(api_key=api_key)
 
 
-# ---------------------------------------------------------
+
 # Core LLM call handler
-# ---------------------------------------------------------
+
 
 def get_groq_response(
     prompt: str,
@@ -83,9 +83,9 @@ def get_groq_response(
 
         return response.choices[0].message.content.strip()
 
-    # -------------------------------------------------
+
     # GROQ QUOTA / RATE LIMIT HANDLING
-    # -------------------------------------------------
+
 
     except Exception as e:
         error_text = str(e).lower()
@@ -122,9 +122,9 @@ def get_groq_response(
         )
 
 
-# ---------------------------------------------------------
+
 # Connection test utility
-# ---------------------------------------------------------
+
 
 def test_groq_connection() -> str:
     """
