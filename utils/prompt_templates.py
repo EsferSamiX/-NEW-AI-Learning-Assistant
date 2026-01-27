@@ -1,6 +1,6 @@
-# ======================================================
+
 # ESSAY PROMPT TEMPLATE
-# ======================================================
+
 
 ESSAY_PROMPT = """
 You are an academic writing assistant.
@@ -144,9 +144,9 @@ Summaries:
 """
 
 
-# ======================================================
+
 # EXAM EVALUATION PROMPTS
-# ======================================================
+
 
 
 SINGLE_QUESTION_EVALUATION_PROMPT = """
@@ -249,9 +249,9 @@ short academic paragraph
 
 
 
-# ======================================================
+
 # QUESTION GENERATION PROMPTS
-# ======================================================
+
 
 
 QUESTION_DIFFICULTY_INSTRUCTIONS = {
@@ -388,9 +388,9 @@ Generate now.
 """
 
 
-# ======================================================
+
 # RAG PROMPTS
-# ======================================================
+
 
 
 RAG_ANSWER_PROMPT = """
@@ -441,9 +441,9 @@ CONTENT:
 
 
 
-# ======================================================
+
 # EXAM STUDY PLANNER — TOPIC EXPANSION PROMPT
-# ======================================================
+
 
 TOPIC_EXPANSION_PROMPT = """
 You are a qualified academic instructor.
