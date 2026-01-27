@@ -44,9 +44,9 @@ def _summarize_chunks(
 
     combined = "\n".join(partial_summaries)
 
-    # --------------------------------------------------
+    
     # Final merge stage
-    # --------------------------------------------------
+ 
 
     if mode == "bullet":
         final_prompt = FINAL_BULLET_MERGE_PROMPT.format(
