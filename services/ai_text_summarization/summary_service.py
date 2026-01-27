@@ -19,9 +19,9 @@ from services.ai_text_summarization.summarization_utils import (
 )
 
 
-# ======================================================
+
 # INTERNAL HELPERS
-# ======================================================
+
 
 def _summarize_chunks(
     chunks: List[str],
@@ -68,9 +68,9 @@ def _summarize_chunks(
     return final_summary.strip()
 
 
-# ======================================================
+
 # TEXT SUMMARIZATION
-# ======================================================
+
 
 def summarize_text(
     text: str,
@@ -124,9 +124,9 @@ Text:
     return summary
 
 
-# ======================================================
+
 # PDF SUMMARIZATION
-# ======================================================
+
 
 def summarize_pdf(
     pdf_file,
