@@ -8,9 +8,9 @@ from utils.prompt_templates import (
 )
 
 
-# ======================================================
+
 # SINGLE QUESTION EVALUATION (10 MARKS)
-# ======================================================
+
 
 def evaluate_single_answer(
     question: str,
@@ -39,9 +39,9 @@ def evaluate_single_answer(
     }
 
 
-# ======================================================
+
 # MULTI-QUESTION EXAM EVALUATION
-# ======================================================
+
 
 def evaluate_exam_answers(
     questions: List[str],
