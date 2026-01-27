@@ -30,35 +30,35 @@ def generate_questions_from_context(
 
     difficulty = difficulty.lower().strip()
 
-    # -------------------------------------------------
+
     # Difficulty resolution
-    # -------------------------------------------------
+   
     difficulty_instruction = QUESTION_DIFFICULTY_INSTRUCTIONS.get(
         difficulty,
         QUESTION_DIFFICULTY_INSTRUCTIONS["medium"],
     )
 
-    # -------------------------------------------------
+    
     # Prompt construction
-    # -------------------------------------------------
+    
     prompt = QUESTION_GENERATION_PROMPT.format(
         difficulty_instruction=difficulty_instruction,
         context=context,
         num_questions=num_questions,
     )
 
-    # -------------------------------------------------
+    
     # LLM call
-    # -------------------------------------------------
+    
     response = get_groq_response(
         prompt=prompt,
         temperature=0.3,
         max_tokens=500,
     )
 
-    # -------------------------------------------------
+   
     # Output parsing
-    # -------------------------------------------------
+    
     questions = []
 
     for line in response.splitlines():
