@@ -5,6 +5,10 @@
 ![License](https://img.shields.io/badge/license-MIT-yellow)
 ![Version](https://img.shields.io/badge/version-1.0.0-green)
 ![Status](https://img.shields.io/badge/status-active-success)
+Demo Video :
+https://drive.google.com/file/d/1ayagyh-UytVTtjNftXYDPJs5sFTLg2s0/view?usp=drive_link
+Project Installation Setup:
+https://drive.google.com/file/d/1bVRqAZwoQslyxZgsLNTa7Hmp6BylKlRJ/view?usp=drive_link
 
 An intelligent multi-module learning assistant built using **Streamlit + LLMs**, designed to support:
 
