@@ -163,7 +163,7 @@ ai-learning-assistant/
 
 ### 1️⃣ Install dependencies
 
-```bash
+
 pip install -r requirements.txt
 
 2️⃣ Configure API key
