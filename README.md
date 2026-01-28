@@ -159,9 +159,9 @@ ai-learning-assistant/
 
 
 
-## 🔐 Environment Setup
+🔐 Environment Setup
 
-### 1️⃣ Install dependencies
+1️⃣ Install dependencies
 
 
 pip install -r requirements.txt
