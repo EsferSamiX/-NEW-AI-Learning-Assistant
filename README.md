@@ -1,7 +1,7 @@
 
 # 🧑‍💻 AI Learning Assistant
-![Python](https://img.shields.io/badge/python-3.10-blue)
-![Streamlit](https://img.shields.io/badge/streamlit-1.30-red)
+![Python](https://img.shields.io/badge/python-3.11-blue)
+![Streamlit](https://img.shields.io/badge/streamlit-1.53.1-red)
 ![License](https://img.shields.io/badge/license-MIT-yellow)
 ![Version](https://img.shields.io/badge/version-1.0.0-green)
 ![Status](https://img.shields.io/badge/status-active-success)
