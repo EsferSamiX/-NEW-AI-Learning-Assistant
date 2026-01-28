@@ -7,6 +7,7 @@
 ![Status](https://img.shields.io/badge/status-active-success)
 <br>
 **Demo Video**
+<br>
 https://drive.google.com/file/d/1ayagyh-UytVTtjNftXYDPJs5sFTLg2s0/view?usp=drive_link
 <br>
 **Project Installation Setup**
